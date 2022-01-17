@@ -33,7 +33,7 @@ if($check -eq $false){
 
   if($check -eq $false){
     Write-Host "Downloading love2d..."
-    $url = "https://bitbucket.org/rude/love/downloads/love-0.10.1-win32.zip"
+    $url = "https://github.com/love2d/love/releases/download/0.10.1/love-0.10.1-win32.zip"
     $webclient.DownloadFile($url,$filename)
   }
 
@@ -48,13 +48,13 @@ $check = Test-Path $tmx
 
 if($check -eq $false){
 
-  $filename = (Get-Location).Path + "\bin\tmx2lua.windows32.zip"
+  $filename = (Get-Location).Path + "\bin\tmx2lua.windows64.zip"
 
   $check = Test-Path $filename
 
   if($check -eq $false){
     Write-Host "Downloading tmx2lua..."
-    $url = "http://hawkthorne.github.com/tmx2lua/downloads/tmx2lua.windows32.zip"
+    $url = "https://github.com/hawkthorne/tmx2lua/releases/download/v1.0.0/tmx2lua.win64.zip"
     $webclient.DownloadFile($url,$filename)
   }
 
